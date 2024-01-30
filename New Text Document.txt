@@ -1,0 +1,29 @@
+#include <bits/stdc++.h>
+using namespace std;
+int find(int x,int y)
+{
+    int s=(x<y)?x:y;
+	int  h = 1; 
+	for (int i=1;i<=s;i++)
+	{ 
+		if (x%i==0&&y%i== 0)
+		{ 
+			h=i; 
+		} 
+	} 
+	return h; 
+}
+int main(){
+    long long int t,n,k,x,y,c;
+    cin>>t;
+    while(t--)
+    {
+        cin>>n>>x>>y;
+        int l=find(x,y);
+        c=n/((x*y)/l);
+        x=n/x-c;
+        y=n/y-c;
+        cout<<n*(n+1)/2-(n-x)*(n-x+1)/2-y*(y+1)/2<<endl;
+    }
+    return 0;
+}
