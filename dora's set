@@ -1,0 +1,18 @@
+#include<bits/stdc++.h>
+using namespace std;
+void ans()
+{
+    int l,r;
+    cin>>l>>r;
+    cout<<((r+1)/2-l/2)/2<<"\n";
+}
+int main()
+{
+    int t;
+    cin>>t;
+    while(t--)
+    {
+       ans();
+    }
+    return 0;
+}
